@@ -29,7 +29,7 @@ func main() {
 		JSONDecoder: json.Unmarshal,
 	})
 	app.Use(compress.New(compress.Config{
-		Level: compress.LevelBestSpeed, // 1
+		Level: compress.LevelBestSpeed,
 	}))
 	app.Use(middleware.LoggerMiddleware)
 	app.Use(middleware.HandlingErrorMiddleware)
